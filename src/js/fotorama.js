@@ -117,6 +117,10 @@ jQuery.Fotorama = function ($fotorama, opts) {
 
   fotoramaData.fotorama = this;
 
+
+
+
+
   function checkForVideo () {
     $.each(data, function (i, dataFrame) {
       if (!dataFrame.i) {
@@ -412,6 +416,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
   function setMeasures (width, height, ratio, index) {
     if (!measuresSetFLAG || (measuresSetFLAG === '*' && index === startIndex)) {
 
+
       ////console.log('setMeasures', index, opts.width, opts.height);
 
       width = measureIsValid(opts.width) || measureIsValid(width) || WIDTH;
@@ -506,7 +511,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
             .addClass(imgClass + (fullFLAG ? ' ' + imgFullClass : ''))
             .prependTo($frame);
 
-        fit($img, ($.isFunction(specialMeasures) ? specialMeasures() : specialMeasures) || measures, method || dataFrame.fit || opts.fit, position || dataFrame.position || opts.position);
+        fit($img, ($.isFunction(specialMeasures) ? specialMeasures() : specialMeasures) || measures, method || dataFrame.fit || opts.fit, position || dataFrame.position || opts.position,opts.imgspace,{w:opts.thumbwidth,h:opts.thumbheight });
 
         $.Fotorama.cache[src] = frameData.state = 'loaded';
 
@@ -647,8 +652,9 @@ jQuery.Fotorama = function ($fotorama, opts) {
     });
   }
 
-  function callFit ($img, measuresToFit, method, position) {
-    return $img && $img.length && fit($img, measuresToFit, method, position);
+
+  function callFit ($img, measuresToFit, method, position,imgspace) {
+    return $img && $img.length && fit($img, measuresToFit, method, position,imgspace,{w:opts.thumbwidth,h:opts.thumbheight });
   }
 
   function stageFramePosition (indexes) {
@@ -667,8 +673,8 @@ jQuery.Fotorama = function ($fotorama, opts) {
         unloadVideo(dataFrame.$video);
       }
 
-      callFit(frameData.$img, measures, method, position);
-      callFit(frameData.$full, measures, method, position);
+      callFit(frameData.$img, measures, method, position,opts.imgspace);
+      callFit(frameData.$full, measures, method, position,opts.imgspace);
     });
   }
 
@@ -697,7 +703,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
 
       if (thisData.l + thisData.w < leftLimit
           || thisData.l > rightLimit
-          || callFit(thisData.$img, specialMeasures, method, position)) return;
+          || callFit(thisData.$img, specialMeasures, method, position,0)) return;
 
       loadFLAG && loadImg([eq], 'navThumb', getSpecialMeasures, method, position);
     });
@@ -893,6 +899,8 @@ jQuery.Fotorama = function ($fotorama, opts) {
         ratio: getRatio(options.ratio)
       })
     });
+
+
   }
 
   function triggerEvent (event, extra) {
@@ -1227,6 +1235,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
   });
 
   that.resize = function (options) {
+
     if (!data) return this;
 
     var time = arguments[1] || 0,
@@ -1238,6 +1247,8 @@ jQuery.Fotorama = function ($fotorama, opts) {
         height = measures.height,
         ratio = measures.ratio,
         windowHeight = $WINDOW.height() - (o_nav ? $nav.height() : 0);
+
+
 
     if (measureIsValid(width)) {
       $wrap
@@ -1256,6 +1267,12 @@ jQuery.Fotorama = function ($fotorama, opts) {
 
       ////console.log('measures.W', measures.W);
       ////console.log('measures.w', measures.w);
+
+        // odo was here
+        var parentHeigh =  parseInt($(fotorama).parent().css( "height" ));
+        if(parentHeigh > 40){
+            windowHeight = parentHeigh;
+        }
 
       height = numberFromWhatever(height, windowHeight);
 
