@@ -12,6 +12,8 @@ Test that Grunt’s CLI is installed by running `grunt --version`.  If the comma
 2. Run `npm install` to install all dependencies (including Grunt).
 3. Run `grunt` to grunt this project.
 
+if you're getting "Warning: spawn ENOENT Use --force to continue." it's probably you don't have sass installed: run sudo gem install sass
+
 Hack on by running `grunt watch` and editing files in the `src/` subdirectory.
 
 The built version of Fotorama will be put in the `out/`.
