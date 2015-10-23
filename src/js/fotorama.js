@@ -919,6 +919,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
   }
 
   function onTouchEnd () {
+    if (!touchedFLAG) return;
     if (!opts.stopautoplayontouch) {
       releaseAutoplay();
       changeAutoplay();
@@ -931,6 +932,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
   }
 
   function releaseAutoplay () {
+    //console.log('releaseAutoplay');
     pausedAutoplayFLAG = !!($videoPlaying || stoppedAutoplayFLAG);
   }
 

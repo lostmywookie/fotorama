@@ -138,44 +138,19 @@ copy: {
     files: [
       {
         src: 'out/fotorama.css',
-        dest: '.fotorama-npm/dist/fotorama.css'
+        dest: '.fotorama-npm/fotorama.css'
       },
         {
         src: 'out/fotorama.png',
-        dest: '.fotorama-npm/dist/fotorama.png'
+        dest: '.fotorama-npm/fotorama.png'
       },
       {
         src: 'out/fotorama@2x.png',
-        dest: '.fotorama-npm/dist/fotorama@2x.png'
+        dest: '.fotorama-npm/fotorama@2x.png'
       },
       {
         src: 'out/fotorama.js',
-        dest: '.fotorama-npm/dist/fotorama.js'
-      }
-    ]
-  },
-  cdnjs: {
-    path: '/Users/artpolikarpov/Projects/Clone/cdnjs/ajax/libs/fotorama',
-    files: [
-      {
-        src: 'out/fotorama.css',
-        dest: '<%= copy.cdnjs.path %>/<%= pkg.version %>/fotorama.css'
-      },
-        {
-        src: 'out/fotorama.png',
-        dest: '<%= copy.cdnjs.path %>/<%= pkg.version %>/fotorama.png'
-      },
-      {
-        src: 'out/fotorama@2x.png',
-        dest: '<%= copy.cdnjs.path %>/<%= pkg.version %>/fotorama@2x.png'
-      },
-      {
-        src: 'out/fotorama.js',
-        dest: '<%= copy.cdnjs.path %>/<%= pkg.version %>/fotorama.js'
-      },
-      {
-        src: 'fotorama.jquery.json',
-        dest: '<%= copy.cdnjs.path %>/package.json'
+        dest: '.fotorama-npm/fotorama.js'
       }
     ]
   }
@@ -392,13 +367,6 @@ shell: {
   indexes: {
     command: './test/index.sh'
   },
-  cdnjs: {
-    command: 'cd ~/Projects/Clone/cdnjs/ ' +
-        '&& git add . ' +
-        '&& git commit -am \'Update Fotorama to <%= pkg.version %>\' ' +
-        '&& git pull cdnjs master ' +
-        '&& git push --progress origin master:master'
-  },
   commit: {
     command: 'git commit fotorama.jquery.json -m \'Tagging the <%= pkg.version %> release\''
   },
@@ -417,7 +385,7 @@ shell: {
         '&& npm publish'
   },
   heroku: {
-    command: 'heroku config:add FOTORAMA_VERSION=<%= pkg.version %> FOTORAMA_NEXT=<%= pkg.version %>'
+    command: 'heroku config:add FOTORAMA_VERSION=<%= pkg.version %>'
   }
 },
 
@@ -494,9 +462,6 @@ grunt.registerTask('default', defaultTask.split(' '));
 //grunt.registerTask('look', 'copy:i sass autoprefixer jst replace:jst concat:js watch'.split(' '));
 
 // Publish, will fail without secret details ;-)
-grunt.registerTask('cdnjs', (defaultTask + ' s3 replace:version copy:cdnjs shell:cdnjs').split(' '));
-
-// Publish, will fail without secret details ;-)
-grunt.registerTask('publish', (defaultTask + ' s3 replace:version copy:bower shell:commit shell:push shell:bower shell:npm shell:heroku').split(' '));
-grunt.registerTask('release', ('replace:history gh_release tweet').split(' '));
+grunt.registerTask('publish', (defaultTask + ' replace:version copy:bower copy:npm shell:commit shell:push shell:bower shell:npm').split(' '));
+grunt.registerTask('release', ('shell:heroku replace:history gh_release tweet').split(' '));
 };

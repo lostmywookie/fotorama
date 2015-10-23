@@ -2,6 +2,29 @@
 
 > https://github.com/artpolikarpov/fotorama/releases
 
+## 4.6.3, 31 December 2014
+
+<!--4.6.4:name-->
+Dummy
+<!--/4.6.4:name-->
+
+<!--4.6.4:notes-->
+Just to fix npm & bower packages.
+<!--/4.6.4:notes-->
+
+<!--4.6.3:name-->
+HPPNWYR
+<!--/4.6.3:name-->
+
+<!--4.6.3:notes-->
+
+* #339 Set `box-sizing: content-box;` only for needed blocks inside a fotorama
+* #323 Fix autoplay interval corruption on mousemove
+* #312 Let browsers round dimensions by themselfs
+* #299 No more collecting fotorama usage statistics via foreign iframe.
+
+<!--/4.6.3:notes-->
+
 ## 4.6.2, 7 August 2014
 
 <!--4.6.2:name-->
@@ -13,7 +36,7 @@ Fotorama 4.6.0 broke image fitting into stage (#286, #291, and many more in inbo
 
 Some new features, meanwhile:
 * New `enableifsingleframe` option. Default value is `false`. Set it to `true` if you don’t want to disable fotorama navigation when it has only one frame.
-* Smarter autoplay. Now waits until the next frame will be fully loaded.
+* Smarter autoplay. Now waits until the next frame is fully loaded.
 
 
 <!--/4.6.2:notes-->

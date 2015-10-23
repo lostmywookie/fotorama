@@ -13,6 +13,10 @@
 	<script src="../out/fotorama.js"></script>
 
   <script type="text/javascript">
+    console = window.console || {};
+    console.time = console.time || $.noop;
+    console.timeEnd = console.timeEnd || $.noop;
+
     $(function () {
       f = $('.fotorama').data('fotorama');
     })
@@ -25,15 +29,10 @@
 <pre style="margin-top: -1em; margin-left: 1em;"><code>&lt;div <mark>class="fotorama"</mark>></code></pre>-->
 
 <!-- Fotorama -->
-<div class="fotorama"
-     data-ratio="3/2"
-     data-height="90%"
-     data-maxheight="100%">
-	<a href="i/okonechnikov/1-lo.jpg" data-width="700" data-height="467"></a>
-	<a href="i/okonechnikov/2-lo.jpg"></a>
-	<a href="i/okonechnikov/12-lo.jpg" data-width="311" data-height="467"></a>
-	<a href="i/okonechnikov/6-lo.jpg" data-width="700" data-height="467"></a>
-	<a href="i/okonechnikov/5-lo.jpg" data-width="700" data-height="467"></a>
+<div class="fotorama">
+  <a href="http://placehold.it/201x200"></a>
+  <a href="http://placehold.it/200x200"></a>
+
 </div>
 
 <!-- © -->
