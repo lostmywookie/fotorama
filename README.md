@@ -1,3 +1,33 @@
+
+# Fotorama by Andrés Bott
+I forked this awsome project to work on features i want in this project.
+feel free to ouse it.
+
+<h3>Features I aded:</h3>
+<h4>- Img Space:</h4>
+add space between image and stage (container) 
+```
+<div class="fotorama"
+    ...
+    data-imgspace="10%"
+    ...
+>
+```
+<h4>- Percent height:</h4>
+on original fotorama, if you use an percent value for height, it will take the height of the window as reference to calculate the height. 
+I modified it to check if the parent has an asociated heigt. and use this height instead.
+```
+<div class="fotorama"
+    ...
+    data-height="100%"
+    ...
+>
+```
+
+as I keep using if, sure more will come...
+
+<hr>
+<h6>Readme from original project:<H6>
 # Fotorama source
 
 There is nothing for non-coders. Take the latest and ready-to-use Fotorama on its website:<br>
