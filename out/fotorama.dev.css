@@ -153,7 +153,7 @@
   margin: 0 !important;
   padding: 0 !important;
   overflow: hidden !important;
-  background: #000; }
+  background: #fff; }
 
 .fotorama--fullscreen {
   position: absolute !important;
@@ -163,13 +163,13 @@
   bottom: 0 !important;
   float: none !important;
   z-index: 2147483647 !important;
-  background: #000;
+  background: #fff;
   width: 100% !important;
   height: 100% !important;
   margin: 0 !important; }
   .fotorama--fullscreen .fotorama__stage,
   .fotorama--fullscreen .fotorama__nav {
-    background: #000; }
+    background: #fff; }
 
 .fotorama__wrap {
   -webkit-text-size-adjust: 100%;
