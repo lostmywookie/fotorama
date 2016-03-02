@@ -241,15 +241,23 @@ $blue: mix(#00d1ff, #008ed6);
   }
 }
 
+.fotorama__nav-wrap {
+  margin-top: -36px;
+  position: absolute;
+}
+
 .fotorama__dot {
   display: block;
-  width: 4px;
-  height: 4px;
+  width: 8px;
+  height: 8px;
   position: relative;
   top: 12px;
   left: 6px;
   border-radius: 6px;
-  border: 1px solid $gray;
+  border: 2px solid $white;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .5);
+  margin-left: 3px;
+  margin-right: 3px;
 
   .fotorama__nav__frame:focus & {
     @extend %focus-overlay;
@@ -261,9 +269,10 @@ $blue: mix(#00d1ff, #008ed6);
   }
 
   .fotorama__nav__frame.fotorama__active & {
-    width: 0;
-    height: 0;
-    border-width: 3px;
+    width: 8px;
+    height: 8px;
+    border-width: 2px;
+    background-color: $white;
     &:after {
       padding: 3px;
       top: -3px;

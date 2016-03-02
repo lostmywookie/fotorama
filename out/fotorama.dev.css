@@ -279,23 +279,31 @@
   .fotorama__nav--thumbs .fotorama__nav__frame--dot {
     display: none; }
 
+.fotorama__nav-wrap {
+  margin-top: -36px;
+  position: absolute; }
+
 .fotorama__dot {
   display: block;
-  width: 4px;
-  height: 4px;
+  width: 8px;
+  height: 8px;
   position: relative;
   top: 12px;
   left: 6px;
   border-radius: 6px;
-  border: 1px solid gray; }
+  border: 2px solid white;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  margin-left: 3px;
+  margin-right: 3px; }
   .fotorama__nav__frame:focus .fotorama__dot:after {
     padding: 1px;
     top: -1px;
     left: -1px; }
   .fotorama__nav__frame.fotorama__active .fotorama__dot {
-    width: 0;
-    height: 0;
-    border-width: 3px; }
+    width: 8px;
+    height: 8px;
+    border-width: 2px;
+    background-color: white; }
     .fotorama__nav__frame.fotorama__active .fotorama__dot:after {
       padding: 3px;
       top: -3px;
