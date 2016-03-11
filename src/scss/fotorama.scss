@@ -5,6 +5,8 @@ $gray: mix(black, white);
 $lightgray: mix($gray, white);
 $blue: mix(#00d1ff, #008ed6);
 
+/* retina background size is specified in _placeholders.scss  */
+
 @import 'mixins';
 @import 'placeholders';
 
