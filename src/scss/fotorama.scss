@@ -218,9 +218,11 @@ $blue: mix(#00d1ff, #008ed6);
 
 .fotorama__nav--dots {
   display: block;
+  height: 0;
+  overflow :visible;
   .fotorama__nav__frame {
-    width: 18px;
-    height: 30px;
+    width: 24px;
+    height: 32px;
   }
   .fotorama__nav__frame--thumb,
   .fotorama__thumb-border {
@@ -242,7 +244,7 @@ $blue: mix(#00d1ff, #008ed6);
 }
 
 .fotorama__nav-wrap {
-  margin-top: -36px;
+  margin-top: -60px;
   position: absolute;
 }
   
