@@ -1,9 +1,16 @@
+I forked this great project to put minor adjustments to the visuals of fotorama gallery.
 
+Features added:
+– New bigger and nicer arrows;
+– Dots are shown over the image, not under it. 
+
+My version is based on a very useful Andrés Bott fork which can be sized in percentage of parent block size, not a window size. I'm not a production-quality programmer, so use my fork for your own risk :)
+
+
+<h6>Readme from Andrés Bott:</h6>
 # Fotorama by Andrés Bott
-I forked this awsome project to work on features i want in this project.
-feel free to ouse it.
 
-<h3>Features I aded:</h3>
+<h3>Features I added:</h3>
 <h4>- Img Space:</h4>
 add space between image and stage (container) 
 ```
@@ -24,10 +31,10 @@ I modified it to check if the parent has an asociated heigt. and use this height
 >
 ```
 
-as I keep using if, sure more will come...
+as I keep using it, sure more will come...
 
 <hr>
-<h6>Readme from original project:<H6>
+<h6>Readme from Artem Polikarpov:</h6>
 # Fotorama source
 
 There is nothing for non-coders. Take the latest and ready-to-use Fotorama on its website:<br>
