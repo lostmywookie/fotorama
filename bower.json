@@ -5,10 +5,10 @@
   "authors": [
     "Artem Polikarpov <artpolikarpov@gmail.com>"
   ],
-  "description": "Small fotorama fork based on Andrés Bott's fork. Fotorama now fits to container and has new icons.",
+  "description": "Small fotorama fork based on Andres Bott's fork. Fotorama now fits to container and has new icons.",
   "main": [
-    "fotorama.css",
-    "fotorama.js"
+    "fotorama/fotorama.css",
+    "fotorama/fotorama.js"
   ],
   "keywords": [
     "gallery",
@@ -30,9 +30,12 @@
     "bower_components",
     "test",
     "tests",
-    "out"
+    "out",
+    "src",
+    "Gruntfile.js"
   ],
   "dependencies": {
     "jquery": ">=1.8"
-  }
+  },
+  "private": true
 }
