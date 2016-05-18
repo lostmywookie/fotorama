@@ -1,5 +1,5 @@
 $time: .3s;
-$arrSize: 100px;
+$arrSize: 80px;
 $white: white;
 $gray: mix(black, white);
 $lightgray: mix($gray, white);
@@ -221,7 +221,7 @@ $blue: mix(#00d1ff, #008ed6);
   height: 0;
   overflow :visible;
   .fotorama__nav__frame {
-    width: 24px;
+    width: 18px;
     height: 32px;
   }
   .fotorama__nav__frame--thumb,
@@ -244,23 +244,31 @@ $blue: mix(#00d1ff, #008ed6);
 }
 
 .fotorama__nav-wrap {
-  margin-top: -60px;
+  margin-top: -36px;
   position: absolute;
 }
+
+@media screen and (min-width: 768px) {
+  .fotorama__nav-wrap {
+    margin-top: -50px;
+  }
+}
+
+
   
 
 .fotorama__dot {
   display: block;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   position: relative;
-  top: 12px;
-  left: 6px;
+  top: 13px;
+  left: 7px;
   border-radius: 6px;
-  border: 2px solid $white;
+  border: 1px solid $white;
   box-shadow: 0 1px 0 rgba(0, 0, 0, .5);
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 4px;
+  margin-right: 4px;
 
   .fotorama__nav__frame:focus & {
     @extend %focus-overlay;
@@ -272,9 +280,9 @@ $blue: mix(#00d1ff, #008ed6);
   }
 
   .fotorama__nav__frame.fotorama__active & {
-    width: 8px;
-    height: 8px;
-    border-width: 2px;
+    width: 6px;
+    height: 6px;
+    border-width: 1px;
     background-color:$white;
     &:after {
       padding: 3px;

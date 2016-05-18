@@ -15,7 +15,7 @@
     <!-- Just don’t want to repeat this prefix in every img[src] -->
     <base href="http://s.fotorama.io/okonechnikov/">
     <style type="text/css">
-      html, body {margin: 0; height: 100%;}
+      body {margin: 0; height: 100%;}
       .slide {
         padding: 40px;
         height: 100%;
@@ -27,14 +27,6 @@
         width: 100%;
         height: 100%;
       }
-      .container {
-        height: 100%;
-        box-sizing: border-box;
-        padding-bottom: 50px;
-      }
-      .inner_container {
-        height: 100%;
-      }
 
     </style>
 
@@ -44,16 +36,12 @@
   <body>
 
     <!-- Fotorama -->
-    <div class="container">
-    <div class="inner_container">
     <div class="fotorama" data-width="100%" data-height="100%" data-allowfullscreen="native" data-nav='dots' data-fit="cover">
       <img src="1-lo.jpg">
       <div class="slide" data-fit="contain"><div class="bg"></div></div>
       <img src="9-lo.jpg">
       <img src="6-lo.jpg">
       <img src="5-lo.jpg">
-    </div>
-    </div>
     </div>
 
   </body>
