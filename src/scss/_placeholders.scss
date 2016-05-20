@@ -138,6 +138,15 @@
   @extend %no-bg-on-print;
 }
 
+%sprite_dark {
+  background: url('fotorama_b.png') no-repeat;
+  @media (#{-webkit-min-device-pixel-ratio}: 1.5), (min-resolution: 2dppx) {
+    background: url('fotorama_b@2x.png') no-repeat;
+    background-size: 240px 400px;
+  }
+  @extend %no-bg-on-print;
+}
+
 %before-load-bg {
   background-color: mix(black, white);
   background-color: rgba(mix(black, white), .2);

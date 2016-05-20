@@ -4,6 +4,7 @@ $white: white;
 $gray: mix(black, white);
 $lightgray: mix($gray, white);
 $blue: mix(#00d1ff, #008ed6);
+$dark: #282425;
 
 @import 'mixins';
 @import 'placeholders';
@@ -291,6 +292,16 @@ $blue: mix(#00d1ff, #008ed6);
     }
   }
 }
+
+.fotorama_dark {
+  .fotorama__dot {
+    border: 1px solid $dark;
+  }
+  .fotorama__nav__frame.fotorama__active .fotorama__dot {
+    background-color:$dark;
+  }
+}
+
 
 .fotorama__thumb {
   overflow: hidden;
