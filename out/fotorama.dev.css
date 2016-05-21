@@ -301,12 +301,11 @@
   height: 6px;
   position: relative;
   top: 13px;
-  left: 7px;
   border-radius: 6px;
   border: 1px solid white;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-  margin-left: 4px;
-  margin-right: 4px; }
+  margin-left: auto;
+  margin-right: auto; }
   .fotorama__nav__frame:focus .fotorama__dot:after {
     padding: 1px;
     top: -1px;
