@@ -7,8 +7,8 @@
   ],
   "description": "Small fotorama fork based on Andres Bott's fork. Fotorama now fits to container and has new icons.",
   "main": [
-    "fotorama/fotorama.css",
-    "fotorama/fotorama.js"
+    "dist/fotorama.css",
+    "dist/fotorama.js"
   ],
   "keywords": [
     "gallery",
