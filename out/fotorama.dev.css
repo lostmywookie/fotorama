@@ -22,14 +22,12 @@
 
 .fotorama__wrap .fotorama__grab {
   cursor: move;
-  cursor: -webkit-grab;
   cursor: -o-grab;
   cursor: -ms-grab;
   cursor: grab; }
 
 .fotorama__grabbing * {
   cursor: move;
-  cursor: -webkit-grabbing;
   cursor: -o-grabbing;
   cursor: -ms-grabbing;
   cursor: grabbing; }
@@ -45,14 +43,12 @@
 .fotorama__fullscreen-icon, .fotorama__wrap--css3
 .fotorama__video-play, .fotorama__wrap--css3
 .fotorama__video-close {
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
 .fotorama__caption, .fotorama__wrap--css3 .fotorama__spinner, .fotorama__wrap--css3 .fotorama__stage,
 .fotorama__wrap--css3 .fotorama__nav,
 .fotorama__wrap--css3 .fotorama__stage__frame, .fotorama__wrap--css3 .fotorama__stage .fotorama__img,
 .fotorama__wrap--css3 .fotorama__html, .fotorama__stage:before, .fotorama__stage:after, .fotorama__nav:before, .fotorama__nav:after {
-  -webkit-transform: translateZ(0);
   transform: translateZ(0); }
 
 .fotorama__nav__frame, .fotorama__fullscreen-icon:focus,
@@ -69,13 +65,11 @@
 .fotorama__wrap--video .fotorama__stage,
 .fotorama__wrap--video .fotorama__stage__frame--video, .fotorama__wrap--video .fotorama__stage__frame--video .fotorama__img,
 .fotorama__wrap--video .fotorama__stage__frame--video .fotorama__html {
-  -webkit-transform: none !important;
   transform: none !important; }
 
 .fotorama__wrap--css3 .fotorama__stage__shaft,
 .fotorama__wrap--css3 .fotorama__nav__shaft,
 .fotorama__wrap--css3 .fotorama__thumb-border {
-  transition-property: -webkit-transform, width;
   transition-property: transform, width;
   transition-timing-function: cubic-bezier(0.1, 0, 0.25, 1);
   transition-duration: 0ms; }
@@ -371,23 +365,12 @@
   background-color: rgba(255, 255, 255, 0.9);
   padding: 5px 10px; }
 
-@-webkit-keyframes spinner {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0); }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-
 @keyframes spinner {
   0% {
-    -webkit-transform: rotate(0);
     transform: rotate(0); }
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 .fotorama__wrap--css3 .fotorama__spinner {
-  -webkit-animation: spinner 24s infinite linear;
   animation: spinner 24s infinite linear; }
 .fotorama__wrap--css3 .fotorama__stage .fotorama__img,
 .fotorama__wrap--css3 .fotorama__html {
@@ -507,13 +490,11 @@
   .fotorama__wrap--css2 .fotorama__video-close {
     display: none; }
   .fotorama__wrap--css3 .fotorama__video-close {
-    -webkit-transform: translate3d(80px, -80px, 0);
     transform: translate3d(80px, -80px, 0); }
   .fotorama__wrap--video .fotorama__video-close {
     display: block;
     opacity: 1; }
   .fotorama__wrap--css3.fotorama__wrap--video .fotorama__video-close {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
 
 .fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr,
@@ -538,29 +519,22 @@
   display: none !important; }
 
 .fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:not(:focus) {
-  -webkit-transform: translate3d(80px, -80px, 0);
   transform: translate3d(80px, -80px, 0); }
 .fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--prev:not(:focus) {
-  -webkit-transform: translate3d(-120px, 0, 0);
   transform: translate3d(-120px, 0, 0); }
 .fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--next:not(:focus) {
-  -webkit-transform: translate3d(120px, 0, 0);
   transform: translate3d(120px, 0, 0); }
 .fotorama__wrap--css3.fotorama__wrap--video .fotorama__fullscreen-icon {
-  -webkit-transform: translate3d(80px, -80px, 0) !important;
   transform: translate3d(80px, -80px, 0) !important; }
 .fotorama__wrap--css3.fotorama__wrap--video .fotorama__arr--prev {
-  -webkit-transform: translate3d(-120px, 0, 0) !important;
   transform: translate3d(-120px, 0, 0) !important; }
 .fotorama__wrap--css3.fotorama__wrap--video .fotorama__arr--next {
-  -webkit-transform: translate3d(120px, 0, 0) !important;
   transform: translate3d(120px, 0, 0) !important; }
 
 .fotorama__wrap--css3 .fotorama__arr:not(:focus),
 .fotorama__wrap--css3 .fotorama__fullscreen-icon:not(:focus),
 .fotorama__wrap--css3 .fotorama__video-play:not(:focus),
 .fotorama__wrap--css3 .fotorama__video-close:not(:focus) {
-  transition-property: -webkit-transform, opacity;
   transition-property: transform, opacity;
   transition-duration: 0.3s; }
 

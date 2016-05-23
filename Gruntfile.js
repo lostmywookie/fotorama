@@ -110,6 +110,34 @@ copy: {
       }
     ]
   },
+    dist: {
+    files: [
+      {
+        src: 'out/fotorama.css',
+        dest: 'dist/fotorama.css'
+      },
+        {
+        src: 'out/fotorama.png',
+        dest: 'dist/fotorama.png'
+      },
+      {
+        src: 'out/fotorama@2x.png',
+        dest: 'dist/fotorama@2x.png'
+      },
+        {
+        src: 'out/fotorama_b.png',
+        dest: 'dist/fotorama_b.png'
+      },
+      {
+        src: 'out/fotorama_b@2x.png',
+        dest: 'dist/fotorama_b@2x.png'
+      },
+      {
+        src: 'out/fotorama.js',
+        dest: 'dist/fotorama.js'
+      }
+    ]
+  },
   bower: {
     files: [
       {
@@ -453,7 +481,7 @@ grunt.loadNpmTasks('grunt-shell');
 grunt.loadNpmTasks('grunt-tweet');
 grunt.loadNpmTasks('grunt-gh-release');
 
-var defaultTask = 'copy:i sass autoprefixer jst replace:jst concat:js replace:console concat:css uglify cssmin jasmine clean copy:example compress';
+var defaultTask = 'copy:i sass autoprefixer jst replace:jst concat:js replace:console concat:css uglify cssmin jasmine clean copy:example compress copy:dist';
 //var build = 'copy:i sass autoprefixer jst replace:jst concat:js replace:console concat:css uglify cssmin clean copy:example compress'.split(' ');
 
 // Compile
